@@ -11,6 +11,8 @@ Place your photos in lib folder and
 ```bash
 bash bot.sh
 ```
+Start only when more then 1 file in lib 
+
 **bot.sh** Post a photo with the file name.
 
 **bot_nofilenames.sh** Post a photo without file name
