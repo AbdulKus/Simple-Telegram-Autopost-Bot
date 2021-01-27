@@ -21,7 +21,7 @@ echo $filetomove" Deleted"
 echo "Sleeping for" $min "min."
 sleep $delay
 a=${#files[@]}
-if [ "${#files[@]}" -eq 0 ]
+if [ "${#files[@]}" -eq 1 ]
 then
 echo -e "${RED}No files left, sending notification"
 telegram-send --config user.conf "No files left"
