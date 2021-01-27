@@ -5,6 +5,7 @@ min=$(($delay / 60))
 files=(./lib/*)
 a=${#files[@]}
 RED='\033[0;31m'
+RES=`tput sgr0`
 until [ "$a" -eq 1 ]
 do
 files=(./lib/*) #creates an array of all the files within src/ */ 
@@ -23,8 +24,8 @@ sleep $delay
 a=${#files[@]}
 if [ "${#files[@]}" -eq 1 ]
 then
-echo -e "${RED}No files left, sending notification"
+echo -e "${RED}No files left, sending notification${RES}"
 telegram-send --config user.conf "No files left"
 fi
 done
-echo -e "No files in lib, ${RED}exiting"
+echo -e "No files in lib, ${RED}exiting${RES}"
