@@ -1,5 +1,5 @@
 echo Installing requirements
-apt install python3-pip --assume-yes
+apt install python-pip --assume-yes
 pip3 install telegram-send
 clear
 echo Setting up
