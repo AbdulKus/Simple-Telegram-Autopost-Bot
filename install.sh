@@ -1,6 +1,6 @@
 echo Installing requirements
-sudo apt install python3-pip --assume-yes
-sudo pip3 install telegram-send
+apt install python3-pip --assume-yes
+pip3 install telegram-send
 clear
 echo Setting up
 telegram-send --config channel.conf --configure-channel
