@@ -2,7 +2,7 @@
 Post a photo to a telegram channel from a folder with a delay.
 ## Installation (Thermux, Ubuntu):
 ```bash
-git clone https://github.com/AbdulKus/Simple-Telegram-Autopost-Bot.git https://github.com/rahiel/telegram-send
+git clone https://github.com/AbdulKus/Simple-Telegram-Autopost-Bot.git
 cd simple-telegram-autopost-bot
 sudo bash install.sh
 ```
