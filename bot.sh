@@ -5,7 +5,7 @@ min=$(($delay / 60))
 files=(./lib/*)
 a=${#files[@]}
 RED='\033[0;31m'
-RES=`tput sgr0`
+RES=`\033[0m`
 until [ "$a" -eq 1 ]
 do
 files=(./lib/*) #creates an array of all the files within src/ */ 
