@@ -9,7 +9,7 @@ echo Setting up
 telegram-send --config user.conf --configure
 clear 
 mkdir lib
-mkdir new
+mkdir now
 RED='\033[0;31m'
 NC='\033[0m'
 echo -e "You can enter a ${RED}delay${NC} between posts in the first line of bot.sh"
