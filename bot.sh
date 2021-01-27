@@ -14,18 +14,17 @@ randomid=$((RANDOM % filecount)) #uses $RANDOM to choose a random number between
 filetomove="${files[$randomid]}" #the random file wich we'll move 
 mv "$filetomove" now/ #does
 echo "Copied "$filetomove" To ./now"
-telegram-send --config channel.conf --image ./now/* --caption $filetomove
+telegram-send --config channel.conf --image ./now/* --caption "${filetomove:6}"
 echo $filetomove" Posted"
 rm -r ./now/*.png
 echo $filetomove" Deleted"
 echo "Sleeping for" $min "min."
 sleep $delay
 a=${#files[@]}
-if [ "${#files[@]}" -eq 0 ]
+if [ "${#files[@]}" -eq 1 ]
 then
 echo -e "${RED}No files left, sending notification"
 telegram-send --config user.conf "No files left"
 fi
 done
-echo -e "No files in lib, ${RED}exiting"
-
+echo -e "No files or only 1 file in lib, ${RED}exiting"
